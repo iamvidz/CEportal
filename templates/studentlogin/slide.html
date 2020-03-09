@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<html>
+
+    <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/ss.css' %}">
+<link href='https://fonts.googleapis.com/css?family=Roboto:300,400' rel='stylesheet' type='text/css'>
+
+    <script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+    </head>
+    <body>
+     
+     
+        <div id="back">
+          {% load static %}
+          <div class="backRight" style="background-image: url({% static 'images/image2.jpg' %})"></div>
+          <div class="backLeft" style="background-image: url({% static 'images/image1.jpg' %})"></div>
+        </div>
+
+<div id="slideBox">
+  <div class="topLayer">
+    <div class="left">
+      <div class="content">
+        <h2>Sign Up</h2>
+        <form method="post" onsubmit="return false;">
+          <div class="form-group">
+              <label for="username" class="form-label" style="color: whitesmoke" >College ID</label>
+            <input type="text" placeholder="College ID" name="collegeid" required=""/>
+          </div>
+          <div>
+            <label for="password" class="form-label" style="color: whitesmoke">Password</label>
+            <input type="password" placeholder="Password" name="password" required="" />
+            
+          </div>
+            
+            <div class="form-group" style="color: whitesmoke">
+                <label for="repass" class="form-label" style="color: whitesmoke">Re-enter </label>
+                <input type="password" placeholder="Re-enter password" name="repass" required="" />
+            </div>
+            <div class="form-group" style="color: whitesmoke">
+                <label for="birthday" class="form-label" style="color: whitesmoke">Birthdate </label>
+                <input type="date" name="dob" required="" />
+            </div>
+            <div class="form-group" style="color: whitesmoke">
+                Contact No.<input type="tel" name="contact" required=""/>
+            </div>
+            <div class="form-group" style="color: whitesmoke">
+                <label for="email" class="form-label" style="color: whitesmoke">Email ID </label>
+                <input type="text" name="email" required="" />
+            </div>
+        </form>
+        <button id="goLeft" class="off">Login</button>
+        <button>Sign up</button>
+      </div>
+    </div>
+    <div class="right">
+      <div class="content">
+        <h2>Login</h2>
+        <form method="post" onsubmit="return false;">
+          <div class="form-group">
+            <label for="username" class="form-label">College ID</label>
+            <input type="text" name="collegeid"/>
+          </div>
+            <div class="form-group">
+            <label for="password" class="form-label">Password</label>
+            <input type="text" name="password"/>
+          </div>
+          <button id="goRight" class="off">Sign Up</button>
+          <button id="login" type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+        
+    <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-db44b196776521ea816683afab021f757616c80860d31da6232dedb8d7cc4862.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+   
+    <script src= " {% static 'js/ssj.js' %} "></script>
+
+    
+</body>
+
+</html>
