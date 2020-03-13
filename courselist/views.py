@@ -6,3 +6,6 @@ from django.http import HttpResponse
 
 def courselist(request):
     return render(request,'courselist/index.html')
+
+def viewcourse(request):
+    return render(request,'courselist/index.html')
